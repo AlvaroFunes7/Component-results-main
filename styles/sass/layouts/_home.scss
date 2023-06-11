@@ -1,0 +1,66 @@
+ @use '../base/fonts';
+ @use '../base/tipo';
+ @use '../utilities/mixins';
+ @use '../utilities/colores';
+
+body{
+    font-family:tipo.$family-f;
+    font-size: tipo.$size-p;
+
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    @include mixins.border(1px, black);
+    
+}
+
+.main-container{
+    // @include mixins.border(2px,red);
+    width: 50%;
+    max-width: 600px;
+    margin: 2rem;
+    display: flex;
+    
+    
+}
+
+.container-result{
+
+    background-image: linear-gradient(colores.$azul-pizzara-bckgrnd, colores.$azul-claro-bckgrnd);
+
+     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .container-tittle{
+        @include mixins.border(1px, grey);
+        text-align: center;
+        color: colores.$azul-lavanda;
+        
+    }
+
+    .container-result-circle{
+        border: 1px solid red;
+        align-self: center;
+        border-radius:50%;
+        width:100px;
+
+        .circle-tittle{
+            font-size: 40px;
+            display: inline-block;
+            text-align: center;
+            
+        }
+
+        p{
+            text-align: center;
+            
+        }
+
+        padding: 0.5rem;
+    }
+}
+
