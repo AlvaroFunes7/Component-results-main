@@ -3,3 +3,21 @@
 @mixin border($ancho, $color){
     border: $ancho solid $color;
 }
+
+@mixin colocarSpan{
+    position: relative;
+    left: -5px;
+    bottom: -4px;
+}
+
+@mixin mq($size) {
+    @if $size == telefono {
+      @media (max-width: 379px) { @content; }
+    } @else if $size == tablet {
+      @media (max-width: 984px) { @content; }
+    } @else if $size == desktop {
+      @media (max-width: 1440px) { @content; }
+    } 
+  }
+  
+  
