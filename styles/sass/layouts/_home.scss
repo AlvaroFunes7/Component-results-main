@@ -14,24 +14,30 @@ body{
 
 
 .main-container{
-    // @include mixins.border(2px,red);
-    // width: 50%;
-    // max-width: 350px;
-    // width: 600px;
-     width: 40vw;
+    width: 50vw;
     margin: 2rem;
     display: flex;
-    // box-sizing:content-box;
-    border: 1px solid red;
-    
-     @include mixins.mq(telefono){
-         flex-direction: column;
-         align-items: center;
-     }
+    max-width: 700px;
+    // border: 1px solid red;
+
      @include mixins.mq(telefono){
         flex-direction: column;
+        width: 100%;
+        align-self: flex-start;
+        margin-top: 0px;
+        position: relative;
+        top: -10px;
+        height: 80vh;
+        border: 1px solid red;
+     }
+
+     @include mixins.mq(tablet){
+        flex-direction: column;
+        width: 50%;
         align-items: center;
-    }
+        
+     }
+     
 
 }
 
@@ -40,6 +46,7 @@ body{
      background-image: linear-gradient( colores.$azul-violeta-crcl,colores.$azul-claro-bckgrnd);
 
     // background-color: mix( colores.$azul-claro-bckgrnd, colores.$azul-pizzara-bckgrnd,75%);
+
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -47,22 +54,41 @@ body{
     padding: 1rem 2rem;
     width: 50%;
     position: relative;
-    // left:20px;
+    left:10px;
     z-index: 1;
+
+    @include mixins.mq(telefono){
+       align-self: center;
+       left: 0;
+       width: 100%;
+       height: 55%;
+    }
+
+    @include mixins.mq(tablet){
+       left:0;
+       top:10px;
+       width: 70%;
+     }
+
+
+
 
     .container-tittle{
         text-align: center;
         font-size: 17px;
         color: colores.$azul-lavanda;
-        margin-bottom: 0rem;
     }
 
     .container-result-circle{
         align-self: center;
         border-radius:50%;
-        width:100px;
+        width:40%;
         padding: 0.5rem;
-        
+
+        @include mixins.mq(telefono){
+            max-width: 120px;
+            
+         }
 
         $fondo-circulo: mix(  colores.$azul-pizzara-bckgrnd,colores.$azul-violeta-crcl, 50%);
 
@@ -75,12 +101,14 @@ body{
             display: inline-block;
             text-align: center;
             color: colores.$blanco;
+
+            
         }
 
         p{
             text-align: center;
             color:lighten(colores.$azul-grisaceo, 40%);;
-        }   
+        }
 
     }
 
@@ -107,13 +135,35 @@ body{
     box-shadow: 0px 0px 10px colores.$azul-lavanda;
     width: 50%;
     z-index: 0;
+    position: relative;
+    left:-10px;
 
-    @include mixins.mq(telefono){
-        top: 40px;
-    }
+   @include mixins.mq(telefono){
+    align-self: center;
+    left: 0;
+    top:-10px;
+    padding-left: 1rem;
+    width: 100%;
+    height: 80%;
+    display: grid;
+   }
+   @include mixins.mq(tablet){
+    padding-left: 1rem;
+    width: 70%;
+  }
     .container-summary-tittle{
         font-size: 17px;
         padding: 0.2rem;
+        // border: 1px solid red;
+
+        @include mixins.mq(telefono){
+        position: relative;
+        left: 0.5rem;
+        }
+        @include mixins.mq(tablet){
+            position: relative;
+            left: 0.5rem;
+          }
     }
 
     .item-summary{
@@ -123,10 +173,13 @@ body{
         padding-left: 0.7rem;
         margin: 0.5rem;
         border-radius: 10px;
-        
+
+        @include mixins.mq(telefono){
+            padding-left: 0.5rem;
+        }
         // border: 1px solid grey;
     }
-    
+
     .item-porcentaje{
         color:lighten(colores.$azul-grisaceo, 50%);
     }
@@ -176,7 +229,7 @@ body{
                 content: url(/assets/images/icon-visual.svg);
                 @include mixins.colocarSpan;
             }
-            
+
         }
     }
 
@@ -196,7 +249,7 @@ body{
             cursor: pointer;
         }
 
-        
+
     }
 
 

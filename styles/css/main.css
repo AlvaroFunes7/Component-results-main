@@ -95,20 +95,27 @@ body {
 }
 
 .main-container {
-  width: 40vw;
+  width: 50vw;
   margin: 2rem;
   display: flex;
-  border: 1px solid red;
+  max-width: 700px;
 }
-@media (max-width: 379px) {
+@media (max-width: 600px) {
   .main-container {
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    align-self: flex-start;
+    margin-top: 0px;
+    position: relative;
+    top: -10px;
+    height: 80vh;
+    border: 1px solid red;
   }
 }
-@media (max-width: 379px) {
+@media (max-width: 900px) {
   .main-container {
     flex-direction: column;
+    width: 50%;
     align-items: center;
   }
 }
@@ -122,20 +129,40 @@ body {
   padding: 1rem 2rem;
   width: 50%;
   position: relative;
+  left: 10px;
   z-index: 1;
+}
+@media (max-width: 600px) {
+  .container-result {
+    align-self: center;
+    left: 0;
+    width: 100%;
+    height: 55%;
+  }
+}
+@media (max-width: 900px) {
+  .container-result {
+    left: 0;
+    top: 10px;
+    width: 70%;
+  }
 }
 .container-result .container-tittle {
   text-align: center;
   font-size: 17px;
   color: hsl(241, 100%, 89%);
-  margin-bottom: 0rem;
 }
 .container-result .container-result-circle {
   align-self: center;
   border-radius: 50%;
-  width: 100px;
+  width: 40%;
   padding: 0.5rem;
   background-color: #411aca;
+}
+@media (max-width: 600px) {
+  .container-result .container-result-circle {
+    max-width: 120px;
+  }
 }
 .container-result .container-result-circle .circle-tittle {
   font-size: 40px;
@@ -167,15 +194,41 @@ body {
   box-shadow: 0px 0px 10px hsl(241, 100%, 89%);
   width: 50%;
   z-index: 0;
+  position: relative;
+  left: -10px;
 }
-@media (max-width: 379px) {
+@media (max-width: 600px) {
   .container-summary {
-    top: 40px;
+    align-self: center;
+    left: 0;
+    top: -10px;
+    padding-left: 1rem;
+    width: 100%;
+    height: 80%;
+    display: grid;
+  }
+}
+@media (max-width: 900px) {
+  .container-summary {
+    padding-left: 1rem;
+    width: 70%;
   }
 }
 .container-summary .container-summary-tittle {
   font-size: 17px;
   padding: 0.2rem;
+}
+@media (max-width: 600px) {
+  .container-summary .container-summary-tittle {
+    position: relative;
+    left: 0.5rem;
+  }
+}
+@media (max-width: 900px) {
+  .container-summary .container-summary-tittle {
+    position: relative;
+    left: 0.5rem;
+  }
 }
 .container-summary .item-summary {
   display: flex;
@@ -184,6 +237,11 @@ body {
   padding-left: 0.7rem;
   margin: 0.5rem;
   border-radius: 10px;
+}
+@media (max-width: 600px) {
+  .container-summary .item-summary {
+    padding-left: 0.5rem;
+  }
 }
 .container-summary .item-porcentaje {
   color: #b3bcd6;
