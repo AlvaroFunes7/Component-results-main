@@ -14,13 +14,13 @@ body{
 
 
 .main-container{
+    // border: 1px solid red;
     width: 50vw;
     margin: 2rem;
     display: flex;
     max-width: 700px;
-    // border: 1px solid red;
 
-     @include mixins.mq(telefono){
+    @include mixins.mq(telefono){
         flex-direction: column;
         width: 100%;
         align-self: flex-start;
@@ -28,50 +28,40 @@ body{
         position: relative;
         top: -10px;
         height: 80vh;
-        border: 1px solid red;
-     }
-
-     @include mixins.mq(tablet){
-        flex-direction: column;
-        width: 50%;
-        align-items: center;
-        
-     }
-     
+    }
+    
+  
+    
+    
 
 }
 
 .container-result{
 
      background-image: linear-gradient( colores.$azul-violeta-crcl,colores.$azul-claro-bckgrnd);
-
+     
+     border-radius: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     padding: 1rem 2rem;
+     width: 50%;
+     position: relative;
+     left:10px;
+     z-index: 1;
     // background-color: mix( colores.$azul-claro-bckgrnd, colores.$azul-pizzara-bckgrnd,75%);
 
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 1rem 2rem;
-    width: 50%;
-    position: relative;
-    left:10px;
-    z-index: 1;
-
+    
     @include mixins.mq(telefono){
-       align-self: center;
-       left: 0;
-       width: 100%;
-       height: 55%;
+        align-self: center;
+        left: 0;
+        width: 100%;
+        height: 55%;
     }
-
-    @include mixins.mq(tablet){
-       left:0;
-       top:10px;
-       width: 70%;
-     }
-
-
-
+    
+   
+    
+    
 
     .container-tittle{
         text-align: center;
@@ -80,22 +70,22 @@ body{
     }
 
     .container-result-circle{
+        
+        
         align-self: center;
         border-radius:50%;
         width:40%;
         padding: 0.5rem;
-
-        @include mixins.mq(telefono){
-            max-width: 120px;
-            
-         }
-
         $fondo-circulo: mix(  colores.$azul-pizzara-bckgrnd,colores.$azul-violeta-crcl, 50%);
 
         // background-image: linear-gradient(to bottom $fondo-circulo, colores.$azul-claro-bckgrnd);
         // background-color: mix(  colores.$azul-pizzara-bckgrnd,colores.$azul-violeta-crcl, 28%);
         background-color: darken($fondo-circulo, 10%);
-
+        
+        @include mixins.mq(telefono){
+            max-width: 120px;
+            
+        }
         .circle-tittle{
             font-size: 40px;
             display: inline-block;
@@ -137,20 +127,20 @@ body{
     z-index: 0;
     position: relative;
     left:-10px;
+    
+    @include mixins.mq(telefono){
+        align-self: center;
+        left: 0;
+        top:-10px;
+        padding-left: 1rem;
+        width: 100%;
+        height: 80%;
+        display: grid;
+    }
 
-   @include mixins.mq(telefono){
-    align-self: center;
-    left: 0;
-    top:-10px;
-    padding-left: 1rem;
-    width: 100%;
-    height: 80%;
-    display: grid;
-   }
-   @include mixins.mq(tablet){
-    padding-left: 1rem;
-    width: 70%;
-  }
+  
+
+
     .container-summary-tittle{
         font-size: 17px;
         padding: 0.2rem;
@@ -160,10 +150,7 @@ body{
         position: relative;
         left: 0.5rem;
         }
-        @include mixins.mq(tablet){
-            position: relative;
-            left: 0.5rem;
-          }
+       
     }
 
     .item-summary{

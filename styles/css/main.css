@@ -100,7 +100,7 @@ body {
   display: flex;
   max-width: 700px;
 }
-@media (max-width: 600px) {
+@media (min-width: 280px) and (max-width: 600px) {
   .main-container {
     flex-direction: column;
     width: 100%;
@@ -109,14 +109,6 @@ body {
     position: relative;
     top: -10px;
     height: 80vh;
-    border: 1px solid red;
-  }
-}
-@media (max-width: 900px) {
-  .main-container {
-    flex-direction: column;
-    width: 50%;
-    align-items: center;
   }
 }
 
@@ -132,19 +124,12 @@ body {
   left: 10px;
   z-index: 1;
 }
-@media (max-width: 600px) {
+@media (min-width: 280px) and (max-width: 600px) {
   .container-result {
     align-self: center;
     left: 0;
     width: 100%;
     height: 55%;
-  }
-}
-@media (max-width: 900px) {
-  .container-result {
-    left: 0;
-    top: 10px;
-    width: 70%;
   }
 }
 .container-result .container-tittle {
@@ -159,7 +144,7 @@ body {
   padding: 0.5rem;
   background-color: #411aca;
 }
-@media (max-width: 600px) {
+@media (min-width: 280px) and (max-width: 600px) {
   .container-result .container-result-circle {
     max-width: 120px;
   }
@@ -197,7 +182,7 @@ body {
   position: relative;
   left: -10px;
 }
-@media (max-width: 600px) {
+@media (min-width: 280px) and (max-width: 600px) {
   .container-summary {
     align-self: center;
     left: 0;
@@ -208,23 +193,11 @@ body {
     display: grid;
   }
 }
-@media (max-width: 900px) {
-  .container-summary {
-    padding-left: 1rem;
-    width: 70%;
-  }
-}
 .container-summary .container-summary-tittle {
   font-size: 17px;
   padding: 0.2rem;
 }
-@media (max-width: 600px) {
-  .container-summary .container-summary-tittle {
-    position: relative;
-    left: 0.5rem;
-  }
-}
-@media (max-width: 900px) {
+@media (min-width: 280px) and (max-width: 600px) {
   .container-summary .container-summary-tittle {
     position: relative;
     left: 0.5rem;
@@ -238,7 +211,7 @@ body {
   margin: 0.5rem;
   border-radius: 10px;
 }
-@media (max-width: 600px) {
+@media (min-width: 280px) and (max-width: 600px) {
   .container-summary .item-summary {
     padding-left: 0.5rem;
   }
